@@ -16,6 +16,10 @@
 		6571FAEF29B5450800C3D997 /* AnyAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6571FAEE29B5450800C3D997 /* AnyAppTests.swift */; };
 		6571FAF929B5450800C3D997 /* AnyAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6571FAF829B5450800C3D997 /* AnyAppUITests.swift */; };
 		6571FAFB29B5450800C3D997 /* AnyAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6571FAFA29B5450800C3D997 /* AnyAppUITestsLaunchTests.swift */; };
+		6571FB8D29B545BF00C3D997 /* CoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6571FB8C29B545BF00C3D997 /* CoreKit.framework */; };
+		6571FB8E29B545BF00C3D997 /* CoreKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6571FB8C29B545BF00C3D997 /* CoreKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6571FB9129B545C400C3D997 /* NetworkKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6571FB9029B545C400C3D997 /* NetworkKit.framework */; };
+		6571FB9229B545C400C3D997 /* NetworkKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6571FB9029B545C400C3D997 /* NetworkKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +39,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		6571FB8F29B545BF00C3D997 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6571FB9229B545C400C3D997 /* NetworkKit.framework in Embed Frameworks */,
+				6571FB8E29B545BF00C3D997 /* CoreKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		6571FAD429B5450700C3D997 /* AnyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6571FAD729B5450700C3D997 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +68,9 @@
 		6571FAF429B5450800C3D997 /* AnyAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnyAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6571FAF829B5450800C3D997 /* AnyAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyAppUITests.swift; sourceTree = "<group>"; };
 		6571FAFA29B5450800C3D997 /* AnyAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		6571FB7F29B5456000C3D997 /* AnyApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnyApp.h; sourceTree = "<group>"; };
+		6571FB8C29B545BF00C3D997 /* CoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6571FB9029B545C400C3D997 /* NetworkKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NetworkKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +78,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6571FB9129B545C400C3D997 /* NetworkKit.framework in Frameworks */,
+				6571FB8D29B545BF00C3D997 /* CoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,10 +103,12 @@
 		6571FACB29B5450700C3D997 = {
 			isa = PBXGroup;
 			children = (
+				6571FB7F29B5456000C3D997 /* AnyApp.h */,
 				6571FAD629B5450700C3D997 /* AnyApp */,
 				6571FAED29B5450800C3D997 /* AnyAppTests */,
 				6571FAF729B5450800C3D997 /* AnyAppUITests */,
 				6571FAD529B5450700C3D997 /* Products */,
+				6571FB8B29B545BF00C3D997 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,6 +153,15 @@
 			path = AnyAppUITests;
 			sourceTree = "<group>";
 		};
+		6571FB8B29B545BF00C3D997 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6571FB9029B545C400C3D997 /* NetworkKit.framework */,
+				6571FB8C29B545BF00C3D997 /* CoreKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,6 +172,7 @@
 				6571FAD029B5450700C3D997 /* Sources */,
 				6571FAD129B5450700C3D997 /* Frameworks */,
 				6571FAD229B5450700C3D997 /* Resources */,
+				6571FB8F29B545BF00C3D997 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
